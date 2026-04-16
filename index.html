@@ -42,11 +42,14 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.2rem 2rem;
       background: rgba(10,10,15,0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1.2rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
     }
 
     .nav-logo {
@@ -80,6 +83,12 @@
       padding: 8rem 2rem 4rem;
       position: relative;
       overflow: hidden;
+    }
+    .hero-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative; z-index: 1;
     }
 
     .hero-glow {
@@ -410,8 +419,9 @@
 
     /* ── RESPONSIVE ── */
     @media(max-width: 600px) {
-      nav { padding: 1rem 1.2rem; }
+      .nav-inner { padding: 1rem 1.2rem; }
       .hero { padding: 7rem 1.2rem 3rem; }
+      .hero-content { padding: 0; }
       .section { padding: 3.5rem 1.2rem; }
       .cta-section { padding: 2.5rem 1.2rem; }
     }
@@ -421,8 +431,10 @@
 
 <!-- NAV -->
 <nav>
+<div class="nav-inner">
   <div class="nav-logo">Enzo<span>Tech</span></div>
   <a href="https://wa.me/5492634841951?text=Hola%2C%20necesito%20ayuda%20t%C3%A9cnica" class="nav-cta" target="_blank">Contactar ahora</a>
+</div>
 </nav>
 
 <!-- HERO -->
@@ -430,6 +442,7 @@
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
 
+  <div class="hero-content">
   <div class="hero-eyebrow">Mendoza · Atención inmediata</div>
 
   <h1>Tu PC funciona<br><em>o te devuelvo</em><br>el dinero.</h1>
@@ -448,6 +461,7 @@
       <span>⭐</span><span>⭐</span><span>⭐</span>
     </div>
     <span>+53 clientes en Mendoza · Respuesta en menos de 1 hora</span>
+  </div>
   </div>
 </section>
 
